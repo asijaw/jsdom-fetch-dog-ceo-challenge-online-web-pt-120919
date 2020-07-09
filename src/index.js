@@ -43,18 +43,16 @@ function makePinkOnClick(li) {
 document.addEventListener('DOMContentLoaded', function() {
     fetchImage();
     fetchBreed();
-    const breeds;
-    const dogBreedUl = document.querySelector("#dog-breeds");
-    const breedDropdown = document.getElementById('breed-dropdown')
-
-    dogBreedUl.addEventListener('click', function(e) {
-        e.target.style.color = "pink";
-    })
+   
+    const breedDropdown = document.querySelector('#breed-dropdown')
+    console.log(breedDropdown);
 
     breedDropdown.addEventListener('change', function(e) {
-        let allBreeds = [];
-        const letter = e.target.value
-        const filtered = allBreeds.filter((breed) => breed.startsWith(letter))
-        dogBreedUl.innerHTML = breedList(filtered)
+        debugger;
+        // let allBreeds = [];
+         const letter = e.target.value
+         console.log(fetchBreed())
+        // const filtered = fetchBreed().filter((breed) => breed.startsWith(letter))
+        // dogBreedUl.innerHTML = breedList(filtered)
     })
 });
